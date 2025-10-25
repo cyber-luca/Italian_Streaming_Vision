@@ -1,0 +1,93 @@
+body{background-color:black;}
+th{color:rgb(66, 26, 26); padding:15px;}
+article{width:100%;}
+p{color:white; padding:15px; font-size:40px;}
+h2{display:inline-block; color:white;}
+h2:hover{color:yellow; transition-deley: 1s;}
+img{width:320px; height:360px;}
+.a{width:50%;}
+
+/* ========================================================= */
+/* STILI PER LA SCORREVOLEZZA E LE FRECCE */
+/* ========================================================= */
+
+/* Contenitore per la riga dei film e le frecce */
+.row-container {
+    position: relative; /* Essenziale per posizionare le frecce in modo assoluto */
+    width: 100%;
+}
+
+/* Tabella scorrevole: l'elemento che contiene le immagini e che scorre */
+.scroll-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    
+    /* Stile per il trascinamento (cursore) */
+    cursor: grab; /* Indica che l'elemento può essere trascinato */
+    
+    /* Miglioramenti per la barra di scorrimento (Firefox) */
+    scrollbar-width: thin; 
+    scrollbar-color: gray black;
+}
+
+/* Cursore del mouse durante il trascinamento (gestito da JS) */
+.scroll-table.active {
+    cursor: grabbing; /* Cursore che indica che l'elemento è afferrato */
+}
+
+/* Nasconde la barra di scorrimento sui browser basati su WebKit (Chrome, Safari, Edge) */
+.scroll-table::-webkit-scrollbar {
+    height: 8px; 
+}
+.scroll-table::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: 4px;
+}
+.scroll-table::-webkit-scrollbar-track {
+    background: black; 
+}
+
+/* Fa in modo che le celle (<td>) siano allineate orizzontalmente */
+.scroll-table td {
+    display: inline-block;
+}
+
+/* Stile per i pulsanti freccia */
+.scroll-btn {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0; /* Inizialmente nascosto */
+    transition: opacity 0.3s;
+    height: 100%; /* Copre l'intera altezza dell'immagine */
+    line-height: 330px; /* Centra il simbolo all'interno del pulsante (aggiustabile a seconda dell'altezza finale dell'immagine) */
+}
+
+/* Posizionamento delle frecce */
+.scroll-btn.left {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+.scroll-btn.right {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Mostra le frecce quando si passa il mouse sul contenitore della riga */
+.row-container:hover .scroll-btn {
+    opacity: 1;
+}
+
+.scroll-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
