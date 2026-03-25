@@ -93,7 +93,7 @@ img{width:320px; height:360px;}
 }
 
 /* Media queries per dispositivi mobili */
-@media (max-width: 768px) {
+@media (min-width: 450px) {
     .a {
         width: 90%; /* Aumenta leggermente la dimensione del logo su mobile */
     }
