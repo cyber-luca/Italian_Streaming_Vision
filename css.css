@@ -95,12 +95,12 @@ img{width:320px; height:360px;}
 /* Media queries per dispositivi mobili */
 @media (max-width: 768px) {
     .a {
-        width: 70%; /* Aumenta leggermente la dimensione del logo su mobile */
+        width: 80%; /* Aumenta leggermente la dimensione del logo su mobile */
     }
     h2 {
-        font-size: 1.5em; /* Aumenta la dimensione del font dei link di navigazione */
+        font-size: 3.5em; /* Aumenta la dimensione del font dei link di navigazione */
     }
     th {
-        padding: 20px; /* Aumenta il padding delle celle di navigazione per renderle più grandi */
+        padding: 60px; /* Aumenta il padding delle celle di navigazione per renderle più grandi */
     }
 }
